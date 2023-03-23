@@ -1,0 +1,74 @@
+/* Transition animation */
+body {
+    transition: background-color 0.3s ease;
+  }
+
+.btn-custom,
+.card,
+.navbar,
+.section-title,
+.navbar-nav .nav-link {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Set Dark Theme As The Default */
+body {
+background-color: #121212 !important;
+  }
+  
+ .btn-custom {
+    background-color: #ffb358 !important;
+    color: #242526 !important;
+  }
+  
+ .card,
+ .navbar {
+    background-color: #242526 !important;
+  }
+  
+ .section-title,
+ .navbar-nav .nav-link {
+    color: #dc9135 !important;
+  }
+  
+
+/* Light Theme */
+.light-theme {
+    background-color: #cbcbcb !important;
+  }
+  
+  .light-theme .btn-custom {
+    background-color: #ffb358 !important;
+    color: #242526 !important;
+  }
+  
+  .light-theme .card,
+  .light-theme .navbar {
+    background-color: #d8d8d8 !important;
+  }
+  
+  .light-theme .section-title,
+  .light-theme .navbar-nav .nav-link {
+    color: #dc9135 !important;
+  }
+  
+  /* Dark Theme */
+  .dark-theme {
+    background-color: #121212 !important;
+  }
+  
+  .dark-theme .btn-custom {
+    background-color: #ffb358 !important;
+    color: #242526 !important;
+  }
+  
+  .dark-theme .card,
+  .dark-theme .navbar {
+    background-color: #242526 !important;
+  }
+  
+  .dark-theme .section-title,
+  .dark-theme .navbar-nav .nav-link {
+    color: #dc9135 !important;
+  }
+  
