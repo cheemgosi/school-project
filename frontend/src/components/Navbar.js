@@ -1,20 +1,32 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { useState } from "react";
 
-const SiteNavbar = () => {
+const SiteNavbar = ({ showEventForm, setShowEventForm, theme }) => {
   return (
     <Navbar expand="lg" className="mb-3">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="w-100">
           <Nav.Item className="mr-auto">
-            <Nav.Link>Add Event</Nav.Link>
+            <Button
+              variant="primary"
+              onClick={() => setShowEventForm(!showEventForm)}
+              className="btn-custom"
+            >
+              Add Event
+            </Button>
           </Nav.Item>
           <Nav.Item className="mx-auto">
-            <Nav.Link>Search for Events</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>City Filter</Nav.Link>
+            <Form className={theme}>
+              <FormControl
+                type="text"
+                placeholder="Search for events"
+                className="mr-sm-2"
+              />
+              <Button variant="outline-secondary">Search</Button>
+            </Form>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

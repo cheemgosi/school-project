@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 import "./themes.css";
 import { useState } from "react";
+import EventForm from "./components/EventForm";
 
 function App() {
   const [theme, setTheme] = useState("dark-theme");
@@ -17,12 +18,19 @@ function App() {
     document.body.className = newTheme;
   };
 
+  const [showEventForm, setShowEventForm] = useState(false);
+
   return (
     <div className="App">
       <Container>
         <Header toggleTheme={toggleTheme} theme={theme} />
-        <Navbar />
-        <EventSection />
+        <Navbar
+          showEventForm={showEventForm}
+          setShowEventForm={setShowEventForm}
+          theme={theme}
+        />
+        {showEventForm && <EventForm theme={theme} />}
+        <EventSection theme={theme} />
         <Footer />
       </Container>
     </div>

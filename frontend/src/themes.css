@@ -1,13 +1,5 @@
 /* Transition animation */
-body {
-    transition: background-color 0.3s ease;
-  }
-
-.btn-custom,
-.card,
-.navbar,
-.section-title,
-.navbar-nav .nav-link {
+* {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -52,6 +44,7 @@ background-color: #121212 !important;
     color: #dc9135 !important;
   }
   
+  
   /* Dark Theme */
   .dark-theme {
     background-color: #121212 !important;
@@ -68,7 +61,33 @@ background-color: #121212 !important;
   }
   
   .dark-theme .section-title,
-  .dark-theme .navbar-nav .nav-link {
+  .dark-theme .navbar-nav .nav-link{
     color: #dc9135 !important;
   }
+
+  .dark-theme label,
+  .dark-theme h3{
+    color: #dc9135 !important;
+  }
+
+  .dark-theme input{
+    background: #242526;
+    color: #dc9135;
+  }
+
+  .dark-theme input:focus,
+  .dark-theme textarea:focus,
+  .dark-theme .form-control,
+  .dark-theme .event-list {
+    background: #242526;
+    color: #dc9135;
+    border: none;
+  }
+
+  
+
+
+  
+
+
   
