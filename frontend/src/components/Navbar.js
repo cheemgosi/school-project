@@ -13,7 +13,7 @@ const SiteNavbar = ({ showEventForm, setShowEventForm, theme }) => {
             <Button
               variant="primary"
               onClick={() => setShowEventForm(!showEventForm)}
-              className="btn-custom"
+              className="btn-custom ms-3"
             >
               Add Event
             </Button>

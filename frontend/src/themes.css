@@ -8,11 +8,6 @@ body {
 background-color: #121212 !important;
   }
   
- .btn-custom {
-    background-color: #ffb358 !important;
-    color: #242526 !important;
-  }
-  
  .card,
  .navbar {
     background-color: #242526 !important;
@@ -29,11 +24,6 @@ background-color: #121212 !important;
     background-color: #cbcbcb !important;
   }
   
-  .light-theme .btn-custom {
-    background-color: #ffb358 !important;
-    color: #242526 !important;
-  }
-  
   .light-theme .card,
   .light-theme .navbar {
     background-color: #d8d8d8 !important;
@@ -44,16 +34,16 @@ background-color: #121212 !important;
     color: #dc9135 !important;
   }
   
+  .light-theme p,
+  .light-theme .card-title{
+    color: #121212 !important; 
+  }
   
   /* Dark Theme */
   .dark-theme {
     background-color: #121212 !important;
   }
   
-  .dark-theme .btn-custom {
-    background-color: #ffb358 !important;
-    color: #242526 !important;
-  }
   
   .dark-theme .card,
   .dark-theme .navbar {
@@ -82,6 +72,11 @@ background-color: #121212 !important;
     background: #242526;
     color: #dc9135;
     border: none;
+  }
+
+  .dark-theme p,
+  .dark-theme .card-title{
+    color: #dc9135 !important; 
   }
 
   

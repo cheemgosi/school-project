@@ -154,15 +154,13 @@ const EventForm = ({ theme }) => {
           <Image
             src={URL.createObjectURL(eventThumbnail)}
             thumbnail
-            width={100}
-            height={100}
             className="mt-3"
           />
         )}
       </Form.Group>
 
       {/* Submit button */}
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" className="mt-3 btn-custom">
         Submit
       </Button>
     </Form>

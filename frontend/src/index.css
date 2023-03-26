@@ -1,0 +1,60 @@
+/* Global Styling */
+
+/* Buttons */
+
+
+.btn-custom {
+    background-color: #ffb358 !important;
+    color: #242526 !important;
+    border: none !important;
+  }
+
+.btn-favs {
+    background-color: #ff5e00 !important;
+    color: #242526 !important;
+    border: none !important;
+  }
+
+.btn-favs-active {
+    background-color: #7b4923 !important;
+    color: #242526 !important;
+    border: none !important;
+  }
+
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: none !important;
+}
+
+input[type="file"] {
+    background-color: #242526 !important;
+    color: #dc9135 !important;
+}
+
+.event-list{
+    max-height: 75vh;
+    overflow-y:auto
+}
+
+.event-thumbnail {
+    max-height: 100px;
+    max-width: 100px;
+    border: 2px solid #121212 !important;
+  }
+
+.event-card *{
+    text-decoration: none;
+}
+
+
+
+.navbar form {
+    display: flex !important;
+  }
+
+  
+

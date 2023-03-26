@@ -1,25 +1,33 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import EventCard from "./EventCard";
+import placeholderImage from ".././img/placeholder.jpg";
 
 const eventSections = [
   {
     title: "Currently Happening",
     events: [
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "curName1",
         location: "curLoc1",
         timeAndDate: "curTime1",
+        endTimeAndDate: "curTimeEnd",
+        price: "7",
+        city: "Kaunas",
+        address: "sampleAddress",
+        eventDescription: "",
+        performersDescription: "",
+        tags: "",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "curName2",
         location: "curLoc2",
         timeAndDate: "curTime2",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "curName3",
         location: "curLoc3",
         timeAndDate: "curTime3",
@@ -30,19 +38,19 @@ const eventSections = [
     title: "Upcoming Events",
     events: [
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "upName1",
         location: "upLoc1",
         timeAndDate: "upTime1",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "upName2",
         location: "upLoc2",
         timeAndDate: "upTime2",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "upName3",
         location: "upLoc3",
         timeAndDate: "upTime3",
@@ -53,25 +61,25 @@ const eventSections = [
     title: "Newly Added Events",
     events: [
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "newName1",
         location: "newLoc1",
         timeAndDate: "newTime1",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "newName2",
         location: "newLoc2",
         timeAndDate: "newTime2",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "newName3",
         location: "newLoc3",
         timeAndDate: "newTime3",
       },
       {
-        thumbnail: "",
+        thumbnail: placeholderImage,
         name: "newName3",
         location: "newLoc3",
         timeAndDate: "newTime3",
