@@ -43,7 +43,7 @@ const EventBanner = ({ event }) => {
           style={{ flexGrow: 1 }}
         >
           <Card.Text>Favourited by: {event.favouritesCount} people</Card.Text>
-          <Card.Text>Organizers: {event.organizers}</Card.Text>
+          <Card.Text>Artists: {event.organizers}</Card.Text>
           <Card.Text>Event Length: {event.length}</Card.Text>
           <Button
             className={showTags ? "btn-favs-active mb-2" : "btn-custom mb-2"}

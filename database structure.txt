@@ -1,0 +1,49 @@
+MongoDB user:
+username:Matas
+pass: r8ceEfaZL7PH9Uu4
+
+MongoDB Events URL: mongodb+srv://Matas:r8ceEfaZL7PH9Uu4@eitherwhere.z1bjudp.mongodb.net/Events?retryWrites=true&w=majority
+
+Event info
+
+
+event name,
+thumbnail,                 
+venue name,
+address,
+start time,
+end time,
+price,
+favourited by x people,
+artists,
+organiser,
+event lenght,
+tags,
+tickets,
+event description,
+artists description,
+contact
+
+Event info in form
+
+
+event name,
+thumbnail,
+venue name, address,
+start time,
+end time,
+price,
+artists,
+tags,
+tickets,
+event description,
+artists description,
+contact info
+
+User info
+
+username,
+password,
+email,
+favs,
+last theme?

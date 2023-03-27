@@ -97,7 +97,7 @@ const EventSection = ({ theme }) => {
           <h3>{section.title}</h3>
           <div className="event-list">
             {section.events.map((event, eventIndex) => (
-              <EventCard key={eventIndex} event={event} />
+              <EventCard key={eventIndex} event={event}/>
             ))}
           </div>
         </Col>

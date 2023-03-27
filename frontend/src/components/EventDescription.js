@@ -132,7 +132,7 @@ const EventDescription = ({ event, theme }) => {
           <p>{eventDescription}</p>
         </Col>
         <Col xs={12} md={6}>
-          <h3>About the Artist</h3>
+          <h3>About the Artists</h3>
           <p>{artistDescription}</p>
         </Col>
       </Row>

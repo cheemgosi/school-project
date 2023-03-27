@@ -44,6 +44,11 @@ background-color: #121212 !important;
     background-color: #f6f6f6;
   }
 
+  .light-theme .card-body:hover{
+    background-color: #cbcbcb;
+    border-radius: 5px;
+  }
+
 
   
   /* Dark Theme */
@@ -120,4 +125,9 @@ background-color: #121212 !important;
     background-color: #444648 !important;
     border: 1px solid #121212 !important;
     color: #dc9135;
+  }
+
+  .dark-theme .card-body:hover{
+    background-color: #313335;
+    border-radius: 5px;
   }

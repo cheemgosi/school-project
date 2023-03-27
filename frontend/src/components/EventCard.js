@@ -17,7 +17,7 @@ const EventCard = ({ event }) => {
   };
 
   return (
-    <Card className="event-card clickable" onClick={handleClick}>
+    <Card className="event-card clickable me-1 mt-1" onClick={handleClick}>
       <Card.Body className="d-flex">
         <img
           src={event.thumbnail}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Modal, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -122,6 +122,112 @@ function Header({ toggleTheme, theme, loggedIn, toggleLoggedIn }) {
     </Modal>
   );
 
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+
+  useEffect(() => {
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
+  }, [password, confirmPassword]);
+
+  const handleToggleRegisterModal = () => {
+    setShowRegisterModal(!showRegisterModal);
+  };
+
+  const renderRegisterModal = () => {
+    const handleToggleRegisterModal = () => {
+      setShowRegisterModal(!showRegisterModal);
+    };
+
+    const handleRegister = () => {
+      if (password === confirmPassword) {
+        // Perform registration logic here, similar to handleLogin
+        toggleLoggedIn();
+        setShowRegisterModal(false);
+      } else {
+        alert("Passwords do not match");
+      }
+    };
+
+    return (
+      <Modal
+        show={showRegisterModal}
+        onHide={handleToggleRegisterModal}
+        className={
+          theme === "dark-theme" ? "custom-modal-dark" : "custom-modal-light"
+        }
+      >
+        <Modal.Header
+          closeButton
+          closeVariant={theme === "dark-theme" ? "white" : ""}
+          className={
+            theme === "dark-theme"
+              ? "custom-modal-header-dark border-secondary"
+              : "custom-modal-header-light"
+          }
+        >
+          <Modal.Title>Register</Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+          className={
+            theme === "dark-theme"
+              ? "custom-modal-body-dark border-secondary"
+              : "custom-modal-body-light"
+          }
+        >
+          <Form>
+            <Form.Group controlId="registerUsername">
+              <Form.Label>Username</Form.Label>
+              <Form.Control type="text" placeholder="Enter username" />
+            </Form.Group>
+            <Form.Group controlId="registerPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="confirmPassword">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="registerEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer
+          className={
+            theme === "dark-theme"
+              ? "custom-modal-footer-dark border-secondary"
+              : "custom-modal-footer-light"
+          }
+        >
+          <Button variant="secondary" onClick={handleToggleRegisterModal}>
+            Close
+          </Button>
+          <Button
+            variant="primary"
+            className="btn-custom"
+            onClick={handleRegister}
+            disabled={password !== confirmPassword || password === ""}
+          >
+            Register
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  };
+
   return (
     <>
       <Row className="align-items-center my-3">
@@ -151,7 +257,7 @@ function Header({ toggleTheme, theme, loggedIn, toggleLoggedIn }) {
             </Button>
           )}
           {!loggedIn && (
-            <Button className="btn-custom" onClick={toggleLoggedIn}>
+            <Button className="btn-custom" onClick={handleToggleRegisterModal}>
               Register
             </Button>
           )}
@@ -159,6 +265,7 @@ function Header({ toggleTheme, theme, loggedIn, toggleLoggedIn }) {
       </Row>
       {renderFavouritesModal()}
       {renderLoginModal()}
+      {renderRegisterModal()}
     </>
   );
 }

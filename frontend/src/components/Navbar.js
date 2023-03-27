@@ -67,9 +67,6 @@ const SiteNavbar = ({ theme }) => {
           <Button variant="secondary" onClick={handleShowModal}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleShowModal}>
-            Save Event
-          </Button>
         </Modal.Footer>
       </Modal>
     </>
