@@ -26,14 +26,8 @@ label {
     font-weight: bold;
 }
 
-input {
-    border: none !important;
-}
 
-input[type="file"] {
-    background-color: #242526 !important;
-    color: #dc9135 !important;
-}
+
 
 .event-list{
     max-height: 75vh;
@@ -56,5 +50,22 @@ input[type="file"] {
     display: flex !important;
   }
 
-  
+.h1 {
+  font-size: 2rem !important;
+}
 
+.h2 {
+  font-size: 1.5rem !important;
+}
+
+h1 {
+  color: #dc9135;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}

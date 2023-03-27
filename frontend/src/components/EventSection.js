@@ -9,16 +9,17 @@ const eventSections = [
     events: [
       {
         thumbnail: placeholderImage,
-        name: "curName1",
-        location: "curLoc1",
-        timeAndDate: "curTime1",
-        endTimeAndDate: "curTimeEnd",
+        name: "Event name",
+        timeAndDate: "2023-03-30 12:00",
+        endTimeAndDate: "2023-03-30 18:00",
         price: "7",
         city: "Kaunas",
-        address: "sampleAddress",
-        eventDescription: "",
-        performersDescription: "",
-        tags: "",
+        location: "Arsenalo g. 5, 01143 Vilnius",
+        eventDescription:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat perspiciatis distinctio nesciunt doloremque minima, ad laboriosam adipisci fuga earum quis vitae commodi fugiat? Commodi non quam aut, quaerat dolorum doloribus!",
+        artistDescription:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam tenetur reprehenderit repellendus officiis quam repellat reiciendis nobis quod, dignissimos aperiam deleniti! Minima ullam ipsum natus eaque beatae possimus a.",
+        tags: ["Kaunas", "Vilnius"],
       },
       {
         thumbnail: placeholderImage,

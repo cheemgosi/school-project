@@ -146,6 +146,7 @@ const EventForm = ({ theme }) => {
       <Form.Group controlId="eventThumbnail">
         <Form.Label>Event Thumbnail</Form.Label>
         <Form.Control
+          className="image-upload-dark"
           type="file"
           onChange={(e) => setEventThumbnail(e.target.files[0])}
           required

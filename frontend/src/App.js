@@ -5,16 +5,25 @@ import Navbar from "./components/Navbar";
 import EventSection from "./components/EventSection";
 import Footer from "./components/Footer";
 import "./themes.css";
-import { useState } from "react";
 import EventForm from "./components/EventForm";
 
-function App({ toggleTheme, theme }) {
-  const [showEventForm, setShowEventForm] = useState(false);
-
+function App({
+  toggleTheme,
+  theme,
+  showEventForm,
+  setShowEventForm,
+  loggedIn,
+  toggleLoggedIn,
+}) {
   return (
     <div className="App">
       <Container>
-        <Header toggleTheme={toggleTheme} theme={theme} />
+        <Header
+          toggleTheme={toggleTheme}
+          theme={theme}
+          toggleLoggedIn={toggleLoggedIn}
+          loggedIn={loggedIn}
+        />
         <Navbar
           showEventForm={showEventForm}
           setShowEventForm={setShowEventForm}

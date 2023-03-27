@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const EventCard = ({ event }) => {
-  const [isFav, setIsFav] = useState(false);
   const navigate = useNavigate();
 
+  const [isFav, setIsFav] = useState(false);
   const toggleFavClass = () => {
     setIsFav(!isFav);
   };
@@ -17,7 +17,7 @@ const EventCard = ({ event }) => {
   };
 
   return (
-    <Card className="event-card" onClick={handleClick}>
+    <Card className="event-card clickable" onClick={handleClick}>
       <Card.Body className="d-flex">
         <img
           src={event.thumbnail}

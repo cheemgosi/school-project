@@ -5,16 +5,29 @@ import Footer from "../components/Footer";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import EventDetails from "../components/EventDetails";
+import EventForm from "../components/EventForm";
 
-const EventInfo = ({ toggleTheme, theme }) => {
+const EventInfo = ({
+  toggleTheme,
+  theme,
+  showEventForm,
+  setShowEventForm,
+  loggedIn,
+  toggleLoggedIn,
+}) => {
   const location = useLocation();
   const event = location.state?.event;
 
   if (!event) {
     return (
       <Container>
-        <Header />
-        <Navbar />
+        <Header toggleLoggedIn={toggleLoggedIn} loggedIn={loggedIn} />
+        <Navbar
+          showEventForm={showEventForm}
+          setShowEventForm={setShowEventForm}
+          theme={theme}
+        />
+        {showEventForm && <EventForm theme={theme} />}
         <div className="">Event not found</div>
         <Footer />
       </Container>
@@ -23,8 +36,18 @@ const EventInfo = ({ toggleTheme, theme }) => {
 
   return (
     <Container>
-      <Header toggleTheme={toggleTheme} theme={theme} />
-      <Navbar theme={theme} />
+      <Header
+        toggleTheme={toggleTheme}
+        theme={theme}
+        toggleLoggedIn={toggleLoggedIn}
+        loggedIn={loggedIn}
+      />
+      <Navbar
+        showEventForm={showEventForm}
+        setShowEventForm={setShowEventForm}
+        theme={theme}
+      />
+      {showEventForm && <EventForm theme={theme} />}
       <EventDetails event={event} theme={theme} />
       <Footer theme={theme} />
     </Container>

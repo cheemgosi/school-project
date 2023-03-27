@@ -35,9 +35,16 @@ background-color: #121212 !important;
   }
   
   .light-theme p,
-  .light-theme .card-title{
+  .light-theme .card-title,
+  .light-theme h1{
     color: #121212 !important; 
   }
+
+  .light-theme .additional-info {
+    background-color: #f6f6f6;
+  }
+
+
   
   /* Dark Theme */
   .dark-theme {
@@ -75,14 +82,42 @@ background-color: #121212 !important;
   }
 
   .dark-theme p,
-  .dark-theme .card-title{
+  .dark-theme .card-title,
+  .dark-theme h1{
     color: #dc9135 !important; 
   }
 
+  .dark-theme .additional-info {
+    background-color: #4a4a4a;
+  }
+
+  .custom-modal-dark {
+    color: #121212;
+  }
+
+  .custom-modal-header-dark {
+    background-color: #242526;
+    color: #dc9135 !important; 
+  }
   
+  .custom-modal-body-dark {
+    background-color: #242526;
+    color: #dc9135 !important; 
+  }
 
+  .custom-modal-footer-dark {
+    background-color: #242526 !important;
+    color: #dc9135 !important; 
+  }
 
-  
-
-
-  
+  .custom-modal-body-dark input,
+  .custom-modal-body-dark input:focus,
+  .custom-modal-body-dark select,
+  .custom-modal-body-dark select:focus,
+  .custom-modal-body-dark textarea,
+  .custom-modal-body-dark textarea:focus,
+  .custom-modal-body-dark input[type="file"]{
+    background-color: #444648 !important;
+    border: 1px solid #121212 !important;
+    color: #dc9135;
+  }
