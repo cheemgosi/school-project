@@ -42,6 +42,10 @@ label {
 }
 
 
+.cropper-container {
+  position: relative;
+  z-index: 0;
+}
 
 
 .event-list{
@@ -85,3 +89,7 @@ h1 {
   box-shadow: none !important;
 }
 
+.cropper-size {
+  width: 55vw;
+  height: 55vh;
+}

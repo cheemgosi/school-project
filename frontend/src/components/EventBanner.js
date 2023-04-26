@@ -13,6 +13,10 @@ const EventBanner = ({ event }) => {
     setIsFav(!isFav);
   };
 
+  const handleTicketButtonClick = () => {
+    window.open(event.tickets, "_blank");
+  };
+
   return (
     <Card
       className="mb-3"
@@ -21,7 +25,7 @@ const EventBanner = ({ event }) => {
       <Card.Img
         className="m-3"
         style={{ width: "300px", height: "300px", objectFit: "cover" }}
-        src={event.thumbnail}
+        src={event.thumbnailUrl}
         alt="Event"
       />
       <div
@@ -33,18 +37,22 @@ const EventBanner = ({ event }) => {
         }}
       >
         <Card.Body>
-          <Card.Title className="h1">{event.name}</Card.Title>
-          <Card.Text>{event.location}</Card.Text>
-          <Card.Text className="h2">{event.timeAndDate}</Card.Text>
+          <Card.Title className="h1">{event.eventName}</Card.Title>
+          <Card.Text>{event.address}</Card.Text>
+          <Card.Text className="h2">
+            {new Date(event.startTime).toLocaleString()} -{" "}
+            {new Date(event.endTime).toLocaleString()}
+          </Card.Text>
           <Card.Text className="h2">{event.price + " eur"}</Card.Text>
         </Card.Body>
         <Card.Body
           className="additional-info me-2 mb-2 rounded"
           style={{ flexGrow: 1 }}
         >
+          {/* You may need to modify this line to display the correct count of favorites */}
           <Card.Text>Favourited by: {event.favouritesCount} people</Card.Text>
-          <Card.Text>Artists: {event.organizers}</Card.Text>
-          <Card.Text>Event Length: {event.length}</Card.Text>
+          <Card.Text>Artists: {event.artists.join(", ")}</Card.Text>
+          <Card.Text>Event Length: {event.eventLength} minutes</Card.Text>
           <Button
             className={showTags ? "btn-favs-active mb-2" : "btn-custom mb-2"}
             onClick={toggleTags}
@@ -62,7 +70,9 @@ const EventBanner = ({ event }) => {
             >
               {isFav ? "Remove from favourites" : "Add to favourites"}
             </Button>
-            <Button className="btn-custom">Tickets</Button>
+            <Button className="btn-custom" onClick={handleTicketButtonClick}>
+              Tickets
+            </Button>
           </div>
         </Card.Body>
       </div>

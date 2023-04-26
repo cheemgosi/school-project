@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const eventRoutes = require("./eventRoutes");
+const eventRoutes = require("./event-routes");
+const handleHomescreenRoutes = require("./handle-homescreen");
 
 const app = express();
 const PORT = 8080;
@@ -13,6 +14,10 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use("/api", eventRoutes);
+app.use("/api", handleHomescreenRoutes);
+
+// Serve static files from the 'uploads' folder
+app.use("/uploads", express.static("uploads"));
 
 // Connect to MongoDB
 const MONGODB_URI =

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const EventCard = ({ event }) => {
   const navigate = useNavigate();
@@ -20,14 +20,19 @@ const EventCard = ({ event }) => {
     <Card className="event-card clickable me-1 mt-1" onClick={handleClick}>
       <Card.Body className="d-flex">
         <img
-          src={event.thumbnail}
-          alt={event.name}
+          src={event.thumbnailUrl}
+          alt={event.eventName}
           className="event-thumbnail me-3"
         />
         <div>
-          <Card.Title className="font-weight-bold">{event.name}</Card.Title>
-          <Card.Text>{event.location}</Card.Text>
-          <Card.Text>{event.timeAndDate}</Card.Text>
+          <Card.Title className="font-weight-bold">
+            {event.eventName}
+          </Card.Title>
+          <Card.Text>{event.address}</Card.Text>
+          <Card.Text>
+            {new Date(event.startTime).toLocaleString()} -{" "}
+            {new Date(event.endTime).toLocaleString()}
+          </Card.Text>
           <Button
             className={isFav ? "btn-favs-active" : "btn-favs"}
             onClick={(e) => {

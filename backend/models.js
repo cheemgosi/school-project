@@ -9,12 +9,14 @@ const eventSchema = new mongoose.Schema({
   address: String,
   startTime: Date,
   endTime: Date,
+  eventLength: Number,
   eventDescription: String,
   price: Number,
   tickets: String,
   tags: [String],
   contactInfo: String,
-  thumbnail: Buffer,
+  thumbnailUrl: String,
+  creationDate: Date,
 });
 
 const Event = mongoose.model("Event", eventSchema);
